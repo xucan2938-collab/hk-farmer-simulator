@@ -352,7 +352,7 @@ tr.hcrow:hover{background:#dce8ff;}
       </div>
       <div class="igrp"><label>截图时间</label><input type="datetime-local" id="snapT"></div>
       <div class="igrp" style="flex-direction:column;align-items:flex-start;">
-        <label style="margin-bottom:4px;">截图多久后成熟</label>
+        <label style="margin-bottom:4px;">截图显示多久后成熟</label>
         <div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap;">
           <select id="rHS" onchange="showRTip()" style="padding:5px;border:1px solid #ddd;border-radius:5px;"></select><span>小时</span>
           <select id="rMS" onchange="showRTip()" style="padding:5px;border:1px solid #ddd;border-radius:5px;"></select><span>分钟</span>
@@ -1110,7 +1110,7 @@ function togTimeMode(){
 function buildWatSels(){
   const T=parseInt(document.getElementById('tT2').value)*60;
   const maxW=Math.floor(T/3);
-  const defR=Math.floor(T*11/15);// default 11/15T
+  const defR=Math.floor(T*11/12);// default 11/12T
   const defRH=Math.floor(defR/60),defRM=defR%60;
   const mRH=Math.floor(T/60),mWH=Math.floor(maxW/60),mWM=maxW%60;
   const rh=document.getElementById('rHS'),rm=document.getElementById('rMS');
