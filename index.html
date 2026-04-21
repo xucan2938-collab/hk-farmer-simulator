@@ -1141,7 +1141,7 @@ function buildResBox(harvestMs,Tmin,plantMs){
     <div><b>最短浇水间隔：</b>${fmtHM(minInt)}</div>
     <div><b>最长浇水间隔：</b>${fmtHM(maxInt)}</div>
     <div class="tipbox">💡 <b>浇水策略：</b><br>
-    前期在 <b>${fmtHM(minInt)}~${fmtHM(maxInt)}</b> 之间任意间隔浇水；<br>
+    前期以 <b>${fmtHM(minInt)}~${fmtHM(maxInt)}</b> 之间任意时间为间隔进行浇水；<br>
     进入<b>斩杀前浇水时间窗口</b>后，在该范围内浇水一次，等斩杀时间点再浇最后一次并收获。<br>
     ⚠️ 时间未精确到秒，实际可能有 1~2 分钟误差，建议稍早操作。</div>
   `;
