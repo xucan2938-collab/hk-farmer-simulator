@@ -1165,7 +1165,7 @@ function calcSnap(){
   const rW=wH*60+wM;
   if(!ss||rT<=0)return alert('请填写时间参数');
   if(rT>T){const el=document.getElementById('rB');el.innerHTML='<span style="color:red;">❌ 剩余时间不能超过总长</span>';el.style.display='block';return;}
-  const canRed=Math.max(0,(Math.floor(T/3)-rW)*.2);
+  const canRed=Math.max(0,(Math.floor(T/3)-rW)*.25);
   const km=(rT-canRed)*.8;
   const hm=new Date(ss).getTime()+km*60000;
   const el=document.getElementById('rB');el.innerHTML=buildResBox(hm,T,null);el.style.display='block';
